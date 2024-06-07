@@ -139,6 +139,7 @@ function getRange($proposals)
             $start = $quotient * 10;
             $end = $start + 5;
         }
+        
         $proposals_range = $start . '-' . $end;
         return $proposals_range;
     //}
