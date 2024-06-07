@@ -1,0 +1,30 @@
+custome validation
+
+
+
+    // dd($request->all());
+        // custome validator messages
+        
+        $rules = [
+            'job_title' => 'required',
+            'skill' => 'required',
+            'experience_id' => 'required',
+            'language' => 'required',
+            'salary_id' => 'required',
+            'job_description' => 'required',
+        ];
+
+        $message = [
+            'job_title.required' => ' Job title is required. ',
+            'skill.required' => ' Skill is required. ',
+            'experience_id.required' => ' Experience is required. ',
+            'language.required' => ' Choose atleast 1 Langiage. ',
+            'salary_id.required' => ' Enter salary range. ',
+            'job_description.required' => ' Enter job description. ',
+        ];
+
+        $validator = Validator::make($request->all(), $rules, $message);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
