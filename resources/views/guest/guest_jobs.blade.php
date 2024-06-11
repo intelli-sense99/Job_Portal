@@ -79,7 +79,7 @@
                         <hr>
                     </div>
                 </div>
-                {{-- --------------jobs tabs--------------- --}}
+                {{-- --------------Jobs tabs--------------- --}}
                 <div class="col-9 ">
                     @if (count($jobs) > 0)
                         @foreach ($jobs as $key => $val)
