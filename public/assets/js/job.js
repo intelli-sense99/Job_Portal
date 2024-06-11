@@ -97,7 +97,7 @@ $(document).ready(function () {
     $('#job-form').submit(function (e) {
         e.preventDefault();
 
-        // let error = '';
+        let job_id = $('.modal_job_id').val();
 
 
 
@@ -120,6 +120,8 @@ $(document).ready(function () {
                     $('.msg').html(response.msg);
                     $('.msg').fadeOut(6000);
                     $('#job-form').trigger('reset');
+                    $('.wcp-apply-' + job_id).html('Applied');
+                    $('.wcp-apply-' + job_id).attr("disabled", true);
 
                 } else {
                     console.log('error!!!')

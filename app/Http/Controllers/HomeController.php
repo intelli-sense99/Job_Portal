@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employer;
 use App\Models\Job;
 use App\Models\Job_inquiries;
 use App\Models\User;
@@ -37,9 +38,8 @@ class HomeController extends Controller
     {
         $id = Auth::id();
 
-
-
         $data = User::find($id);
+
 
         // dd($data);
         $jobs = [];
@@ -48,6 +48,8 @@ class HomeController extends Controller
             $jobs = $data->getJobs;
         }
 
+        // $employer = Employer::with('employer_id', $id);
+        // dd($employer);
 
         if ($data->role == 1) {
             return view('employee.employeeDashboard', ['employeedata' => $data]);

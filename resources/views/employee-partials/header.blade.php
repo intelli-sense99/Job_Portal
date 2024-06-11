@@ -18,7 +18,7 @@
             <ul class="navbar-nav ms-md-auto gap-2">
                 <li class="nav-item rounded">
                     <a class="nav-link active" aria-current="page" href="{{ url('/') }}"><i
-                            class="bi bi-house-fill me-2"></i>Home</a>
+                            class="bi bi-house-fill me-2"></i>Jobs</a>
                 </li>
 {{-- 
                 <li class="nav-item rounded">
